@@ -1,0 +1,17 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.11
+        with:
+          heroku_api_key: ${{secrets.7c99671c-1240-4050-ada8-2619173f7f67}}
+          heroku_app_name: "ihopenooneseesthis"
+          heroku_email: "ukg_123@yahoo.com"
